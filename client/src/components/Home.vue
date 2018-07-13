@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-link to="/food">Nuevo alimento</router-link>
     <div v-for="food in foods" :key="food.id" class="food">
       <p>{{food.name}}</p>
       <p>{{food.temporality}}</p>

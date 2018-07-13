@@ -7,17 +7,9 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
 router.post('/', function (req, res) {
+    console.log(req.body.name)
     Food.create({
         name : req.body.name,
-        temporality: req.body.temporality,
-        price: req.body.price,
-        origin: req.body.origin,
-        proveedor: {
-            name: req.body.proveedor.name,
-            phone: req.body.proveedor.phone,
-            address: req.body.proveedor.address,
-            mail: req.body.proveedor.mail
-        }
     })
         .then((food) => res.status(200).send(food))
         .catch(() => res.status(500).send("There was a problem adding the information to the database."))
