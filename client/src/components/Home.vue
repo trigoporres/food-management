@@ -19,7 +19,7 @@ export default {
     }
   },
   created () {
-    axios.get(`http://localhost:3000`)
+    axios.get(`https://api-alimenticia.herokuapp.com/`)
     .then(response => {
       response.data.forEach((element) => this.foods.push(element))
     })
