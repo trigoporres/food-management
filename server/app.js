@@ -9,7 +9,7 @@ app.listen(port, function() {
 });
 
 var whitelist = [
-  'http://localhost:8080',
+  'https://api-food-8a0de.firebaseapp.com',
 ];
 var corsOptions = {
   origin: function(origin, callback){
