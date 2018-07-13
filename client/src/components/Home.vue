@@ -19,7 +19,7 @@ export default {
     }
   },
   created () {
-    axios.get(`http://localhost:3000/food/list`)
+    axios.get(`http://localhost:3000`)
     .then(response => {
       response.data.forEach((element) => this.foods.push(element))
     })

@@ -26,6 +26,6 @@ const AuthController = require('./user/auth/AuthController')
 
 app.use('/users', UserController)
 app.use('/api/auth', AuthController)
-app.use('/food', FoodController)
+app.use('/', FoodController)
 
 module.exports = app
